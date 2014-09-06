@@ -174,3 +174,11 @@ header {
         }
     }
 }
+
+.admin {
+    //styles for the admin area
+    .navbar {
+        background: $dark-gray;
+        color: $white;
+    }
+}
