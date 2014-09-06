@@ -70,6 +70,8 @@ $(document).ready(function(){
         var fin_high = $("#high_est").val();
         
         var fin_low = $("#low_est").val();
+
+        var authenticity_token = $("#authenticity_token").val();
         
         if(title === '' || fin_high === '' || fin_low === ''){
             $("#save_response").html('<div class="alert alert-warning">Please make sure all required information is complete before saving</div>');
@@ -84,7 +86,8 @@ $(document).ready(function(){
                     title:title,
                     high_end:fin_high,
                     low_end:fin_low,
-                    date_saved: date_saved
+                    date_saved: date_saved,
+                    authenticity_token: authenticity_token
                 },
                 success:function(html_response){
                     $("#save_response").html(html_response);
@@ -95,16 +98,20 @@ $(document).ready(function(){
 
     $(".delete").click(function() {
         
-        var id = $(this).attr("id");
+        var est_id = $(this).attr("id");
+
+        var authenticity_token = $("#authenticity_token").val();
 
         $.ajax({
-                url: '/remove/'+id,
+                url: '/estimate',
                 type: 'DELETE',
                 data: {
-                    id: id
+                    est_id: est_id,
+                    authenticity_token: authenticity_token
                 },
                 success:function(html_response){
                     $("#save_response").html(html_response);
+                    $("."+est_id).fadeOut();
                 }
             });
 

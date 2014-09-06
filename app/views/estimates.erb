@@ -23,10 +23,9 @@
                 <div class="col-sm-6 col-lg-3">Date Saved</div>
                 <div class="col-sm-6 col-lg-3">Delete Record</div>
             </div>
-
         <% @all_est.each do |est| %>
 
-            <div class="row">
+            <div class="row <%= est['_id'] %>">
                 <div class="col-sm-6 col-lg-3"><%= est['title'] %></div>
                 <div class="col-sm-6 col-lg-3"><%= est['high_end'] %></div>
                 <div class="col-sm-6 col-lg-3"><%= est['low_end'] %></div>
@@ -35,7 +34,7 @@
             </div>
 
         <% end %>
-        
+        <input type="hidden" id="authenticity_token" name="authenticity_token" value="<%= @auth_token %>" />
     </main>
 </body>
 </html>

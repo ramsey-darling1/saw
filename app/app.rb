@@ -6,26 +6,6 @@ module Saw
     enable :sessions
 
     ##
-    # Caching support.
-    #
-    # register Padrino::Cache
-    # enable :caching
-    #
-    # You can customize caching store engines:
-    #
-    # set :cache, Padrino::Cache.new(:LRUHash) # Keeps cached values in memory
-    # set :cache, Padrino::Cache.new(:Memcached) # Uses default server at localhost
-    # set :cache, Padrino::Cache.new(:Memcached, '127.0.0.1:11211', :exception_retry_limit => 1)
-    # set :cache, Padrino::Cache.new(:Memcached, :backend => memcached_or_dalli_instance)
-    # set :cache, Padrino::Cache.new(:Redis) # Uses default server at localhost
-    # set :cache, Padrino::Cache.new(:Redis, :host => '127.0.0.1', :port => 6379, :db => 0)
-    # set :cache, Padrino::Cache.new(:Redis, :backend => redis_instance)
-    # set :cache, Padrino::Cache.new(:Mongo) # Uses default server at localhost
-    # set :cache, Padrino::Cache.new(:Mongo, :backend => mongo_client_instance)
-    # set :cache, Padrino::Cache.new(:File, :dir => Padrino.root('tmp', app_name.to_s, 'cache')) # default choice
-    #
-
-    ##
     # Application configuration options.
     #
     # set :raise_errors, true       # Raise exceptions (will stop application) (default for test)
@@ -41,38 +21,36 @@ module Saw
     # layout  :my_layout            # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
     #
 
-    ##
-    # You can configure for a specified environment like:
-    #
-    #   configure :development do
-    #     set :foo, :bar
-    #     disable :asset_stamp # no asset timestamping for dev
-    #   end
-    #
-
-    ##
-    # You can manage errors like:
-    #
-    #   error 404 do
-    #     render 'errors/404'
-    #   end
-    #
-    #   error 500 do
-    #     render 'errors/500'
-    #   end
-    #
-
     #start app
 
     get '/' do
         #display main page
+        @auth_token = session[:'csrf'].to_s #auth token for saving forms
         erb :index
     end
 
     post '/save' do
         #save an estimate
-        Estimate.new(params)
-        erb :saved
+        save = Estimate.new(params)
+        if save.save
+            erb :saved
+        else
+            erb :not_saved
+        end
+        
+    end
+
+    get '/estimates' do
+        #display all estimates
+        @all_est = Estimate.all()
+        @auth_token = session[:'csrf'].to_s #auth token for saving forms
+        erb :estimates
+    end
+
+    delete '/estimate' do
+        est_id = params[:est_id]
+        Estimate.destroy_all(_id: est_id)
+        erb '<div class="alert alert-success">Estimate Deleted</div>'
     end
 
   end
