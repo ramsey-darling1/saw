@@ -69,5 +69,11 @@ module Saw
         erb :index
     end
 
+    post '/save' do
+        #save an estimate
+        Estimate.new(params)
+        erb :saved
+    end
+
   end
 end
