@@ -1,0 +1,10 @@
+---
+:orm: mongoid
+:test: none
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: none
+:namespace: Saw
+:migration_format: number
+:admin_renderer: slim

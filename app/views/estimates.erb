@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>saw chart</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootflat.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <!--js-->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="/js/saw.js"></script>
+</head>
+<body>
+    <header>
+        <h1>saw chart - admin area</h1> 
+    </header>
+    <div id="save_response"></div>
+    <main class="container">
+        <div class="row">
+                <div class="col-sm-6 col-lg-3">Title</div>
+                <div class="col-sm-6 col-lg-3">High End</div>
+                <div class="col-sm-6 col-lg-3">Low End</div>
+                <div class="col-sm-6 col-lg-3">Date Saved</div>
+                <div class="col-sm-6 col-lg-3">Delete Record</div>
+            </div>
+
+        <% @all_est.each do |est| %>
+
+            <div class="row">
+                <div class="col-sm-6 col-lg-3"><%= est['title'] %></div>
+                <div class="col-sm-6 col-lg-3"><%= est['high_end'] %></div>
+                <div class="col-sm-6 col-lg-3"><%= est['low_end'] %></div>
+                <div class="col-sm-6 col-lg-3"><%= DateTime.strptime(est['date_saved'],'%s').strftime("%d/%m/%y") %></div>
+                <div class="col-sm-6 col-lg-3"><button class="delete btn btn-danger" id="<%= est['_id'] %>">delete</button></div>
+            </div>
+
+        <% end %>
+        
+    </main>
+</body>
+</html>

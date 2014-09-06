@@ -1,0 +1,136 @@
+/**
+ *Main Stylesheet SAW
+ *@rdarling
+ *
+ */
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.brick {
+  clear: both; }
+
+.disappear {
+  display: none; }
+
+.required {
+  background: #4A89DC; }
+
+.needed {
+  background: #5D9CEC; }
+
+.desired {
+  background: #F6BB42; }
+
+.good {
+  background: #FFCE54; }
+
+.component {
+  padding: 2rem 4rem;
+  margin: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10; }
+
+.op {
+  opacity: 0.6; }
+
+#phase1 h2 {
+  background: #ED5565;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase2 h2 {
+  background: #E9573F;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase3 h2 {
+  background: #37BC9B;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase4 h2 {
+  background: #8CC152;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase5 h2 {
+  background: #3BAFDA;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase6 h2 {
+  background: #967ADC;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase7 h2 {
+  background: #656D78;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase8 h2 {
+  background: #D770AD;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+#phase9 h2 {
+  background: #AAB2BD;
+  margin: 1.1rem;
+  padding: 1rem;
+  color: #F5F7FA; }
+
+header {
+  margin-bottom: 5rem; }
+  header h1 {
+    text-align: center;
+    font-weight: normal; }
+  header #totals {
+    position: fixed;
+    width: 100%;
+    background: #F5F7FA;
+    color: #656D78;
+    opacity: 0.8;
+    text-align: center;
+    z-index: 100; }
+    header #totals #save_prev {
+      margin-right: 2rem; }
+
+.row {
+  display: flex; }
+
+.col-md-6 {
+  align-items: stretch; }
+
+#save_response {
+  z-index: 210; }
+
+#overlay {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 178, 189, 0.9);
+  color: #F5F7FA;
+  top: 0;
+  left: 0; }
+  #overlay #inner_overlay {
+    margin: 20rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: #656D78;
+    border-radius: 0.5rem;
+    opacity: 1; }
+    #overlay #inner_overlay input {
+      margin-bottom: 1rem; }

@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+    <title>saw chart</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootflat.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <!--js-->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="/js/saw.js"></script>
+</head>
+<body>
+    <header>
+        <h1>saw chart</h1>
+        <div id="totals">
+        totals: low: <span id="low">0</span> | high: <span id="high">0</span>
+        <button type="button" id="save_prev" class="btn right">save</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="phase row" id="phase1">
+            <div class="col-md-6 original">
+                <h2>Initial Phase</h2>
+                <div class="component needed">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Iteration Meetings</p>
+                    <div class="icons">
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component required">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Information Gathering</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                    <input type="hidden" value="1" class="gear"/>
+                </div>    
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase2">
+            <div class="col-md-6 original">
+                <h2>Planning Phase</h2>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>UX</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component required">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Technology Requirements</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Homepage Requirements</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Gather Required Software</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Gather Required Media Assets</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase3">
+            <div class="col-md-6 original">
+                <h2>Design Phase</h2>
+                <div class="component needed">
+                <input type="hidden" class="low" value="7" />
+                <input type="hidden" class="high" value="8" />
+                    <p>Design</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component needed">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Subpage Design</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Responsive Design</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase4">
+            <div class="col-md-6 original">
+                <h2>Development Phase</h2>
+                <div class="component required">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Create Environment</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component required">
+                <input type="hidden" class="low" value="7" />
+                <input type="hidden" class="high" value="8" />
+                    <p>Development</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Cross Browser Testing</p>
+                    <div class="icons">
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Mobile Testing</p>
+                    <div class="icons">
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase5">
+            <div class="col-md-6 original">
+                <h2>Content Phase</h2>
+                <div class="component needed">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Content Structure</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component needed">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Navigation</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component needed">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Page Builds</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component needed">
+                <input type="hidden" class="low" value="7" />
+                <input type="hidden" class="high" value="8" />
+                    <p>Content</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase6">
+            <div class="col-md-6 original">
+                <h2>Feature Phase</h2>
+                <div class="component good">
+                <input type="hidden" class="low" value="7" />
+                <input type="hidden" class="high" value="8" />
+                    <p>Custom Feature</p>
+                    <div class="icons">
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Plugin Feature</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Contact Form</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="7" />
+                <input type="hidden" class="high" value="8" />
+                    <p>E-commerce</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Add Products</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase7">
+            <div class="col-md-6 original">
+                <h2>Polishing Phase</h2>
+                <div class="component desired">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Polishing</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Site Map</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase8">
+            <div class="col-md-6 original">
+                <h2>Deployment Phase</h2>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Final Testing</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />  
+                    <p>Deployment</p>
+                    <div class="icons">
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+        
+        <section class="phase row" id="phase9">
+            <div class="col-md-6 original">
+                <h2>Maintenance Phase</h2>
+                <div class="component good">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Automated Backups</p>
+                    <div class="icons"><img src="imgs/gear.png" /></div>
+                </div>
+                <div class="component desired">
+                <input type="hidden" class="low" value="1" />
+                <input type="hidden" class="high" value="2" />
+                    <p>Backups and Updates</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+                <div class="component good">
+                <input type="hidden" class="low" value="3" />
+                <input type="hidden" class="high" value="6" />
+                    <p>Content Maintenance</p>
+                    <div class="icons">
+                        <img src="imgs/person.png" />
+                        <img src="imgs/repeat.png" />
+                        <img src="imgs/gear.png" />
+                        <img src="imgs/gear.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 snap">
+                <h3 class="op">active</h3>
+                <div class="op">drag desired components here</div>
+            </div>
+        </section>
+    </main>
+    <div id="overlay" class="disappear">
+        <div id="inner_overlay">
+        <div id="save_response"></div>
+            <h2>Save</h2>
+            <form>
+                Please Title the Project
+                <input type="text" name="title" id="title" class="form-control" placeholder="project title" required />
+                <p>Range in Hours</p>
+                High End:
+                <input type="text" name="high_est" id="high_est" class="form-control" readonly />
+                Low End:
+                <input type="text" name="low_est" id="low_est" class="form-control" readonly />
+                <button type="button" id="save" class="btn btn-success">confirm and save</button>
+                <button type="button" id="close" class="btn btn-warning">close</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

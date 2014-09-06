@@ -1,0 +1,176 @@
+/**
+ *Main Stylesheet SAW
+ *@rdarling
+ *
+ */
+
+$light-blue: #5D9CEC;
+$dark-blue: #4A89DC;
+$dark-yellow: #F6BB42;
+$light-yellow: #FFCE54;
+$dark-gray: #656D78;
+$pink: #ED5565;
+$orange: #E9573F;
+$white: #F5F7FA;
+$green: #8CC152;
+$aqua: #3BAFDA;
+$purple: #967ADC;
+$gray: #656D78;
+$mint: #37BC9B;
+$rose: #D770AD;
+$light-gray: #AAB2BD;
+
+$standard-margin: 1.1rem;
+$standard-padding: 1rem;
+
+@mixin margin-padding {
+    margin: $standard-margin;
+    padding: $standard-padding;
+}
+
+.left {float: left;}
+.right {float: right;}
+.brick {clear: both;}
+.disappear {display:none;}
+
+.required {
+    background: $dark-blue;
+}
+
+.needed {
+    background: $light-blue;
+}
+
+.desired {
+    background: $dark-yellow;
+}
+
+.good {
+    background: $light-yellow;
+}
+
+.component {
+    padding: 2rem 4rem;
+    margin: $standard-margin;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.op {opacity: 0.6;}
+
+#phase1 h2 {
+    background: $pink;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase2 h2 {
+    background: $orange;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase3 h2 {
+    background: $mint;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase4 h2 {
+    background: $green;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase5 h2 {
+    background: $aqua;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase6 h2 {
+    background: $purple;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase7 h2 {
+    background: $gray;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase8 h2 {
+    background: $rose;
+    @include margin-padding;
+    color: $white;
+}
+
+#phase9 h2 {
+    background: $light-gray;
+    @include margin-padding;
+    color: $white;
+}
+
+//Header
+header {
+
+    margin-bottom: 5rem;
+    
+    h1 {
+        text-align: center;
+        font-weight: normal;
+    }
+    
+    #totals {
+        position: fixed;
+        width: 100%;
+        background: $white;
+        color: $gray;
+        opacity: 0.8;
+        text-align: center;
+        z-index: 100;
+
+        #save_prev {
+            margin-right: 2rem;
+        }
+    }
+}
+
+.row {
+    display: flex;
+}
+
+.col-md-6 {
+
+    align-items:stretch;
+}
+
+#save_response {
+    z-index: 210;
+}
+
+#overlay {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background: rgba(170, 178, 189, 0.9);    
+    color: $white;
+    top: 0;
+    left: 0;
+
+    #inner_overlay {
+        margin: 20rem auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: $dark-gray;
+        border-radius: .5rem;
+        opacity: 1;
+
+        input {
+            margin-bottom: 1rem;
+        }
+    }
+}
