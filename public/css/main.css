@@ -134,3 +134,7 @@ header {
     opacity: 1; }
     #overlay #inner_overlay input {
       margin-bottom: 1rem; }
+
+.admin .navbar {
+  background: #656D78;
+  color: #F5F7FA; }
