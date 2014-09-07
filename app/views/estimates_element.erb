@@ -7,6 +7,7 @@
                 <div class="col-sm-6 col-lg-3">Low End</div>
                 <div class="col-sm-6 col-lg-3">Date Saved</div>
                 <div class="col-sm-6 col-lg-3">Delete Record</div>
+                <div class="col-sm-6 col-lg-3">View Components</div>
             </div>
         <% @all_est.each do |est| %>
 
@@ -16,6 +17,7 @@
                 <div class="col-sm-6 col-lg-3"><%= est['low_end'] %></div>
                 <div class="col-sm-6 col-lg-3"><%= DateTime.strptime(est['date_saved'],'%s').strftime("%d/%m/%y") %></div>
                 <div class="col-sm-6 col-lg-3"><button class="delete btn btn-danger" id="<%= est['_id'] %>">delete</button></div>
+                <div class="col-sm-6 col-lg-3"><button class="view-components btn btn-success" id="view_<%= est['_id'] %>">view components</button></div>
             </div>
 
         <% end %>

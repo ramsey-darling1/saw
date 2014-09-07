@@ -53,5 +53,11 @@ module Saw
         erb '<div class="alert alert-success">Estimate Deleted</div>'
     end
 
+    get '/single-estimate' do
+        est_id = params[:est_id]
+        @single_estimate = Estimate.where(_id: est_id)
+        erb :single_estimate
+    end
+
   end
 end

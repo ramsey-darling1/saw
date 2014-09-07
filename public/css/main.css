@@ -135,6 +135,22 @@ header {
     #overlay #inner_overlay input {
       margin-bottom: 1rem; }
 
+.admin h1, .admin h2, .admin h3 {
+  font-weight: normal;
+  display: block; }
+.admin div {
+  transition: all 0.5s ease; }
 .admin .navbar {
   background: #656D78;
-  color: #F5F7FA; }
+  color: #F5F7FA;
+  box-shadow: none; }
+  .admin .navbar a, .admin .navbar a:link {
+    color: #F5F7FA;
+    transition: all 0.5s ease;
+    cursor: pointer; }
+  .admin .navbar .nav > li > a:hover, .admin .navbar .nav > li > a:focus {
+    color: #656D78; }
+.admin #view_estimates {
+  cursor: pointer; }
+.admin #estimate_list .row {
+  margin-bottom: 1rem; }

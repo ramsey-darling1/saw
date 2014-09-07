@@ -7,7 +7,9 @@ $(document).ready(function(){
 
 	var low = Number($("#low").html());
     
-    $(".component").draggable({
+    var components = [];
+
+    var comp = $(".component").draggable({
             revert: 'invalid',            
             snap: '.snap, .original'
         });
@@ -15,10 +17,14 @@ $(document).ready(function(){
     $(".snap").droppable({
             drop: function(event, ui){
         		
-        		var comp_high = Number($(".high").val());
+        		var comp_high = Number($("div.ui-draggable-dragging .high").val());
         		
-        		var comp_low = Number($(".low").val());
+        		var comp_low = Number($("div.ui-draggable-dragging .low").val());
+                
+                var component = $("div.ui-draggable-dragging p.component-title").html();
         		
+                components.push(component);
+
         		high += comp_high;
 
         		low += comp_low;
@@ -87,6 +93,7 @@ $(document).ready(function(){
                     high_end:fin_high,
                     low_end:fin_low,
                     date_saved: date_saved,
+                    components: components,
                     authenticity_token: authenticity_token
                 },
                 success:function(html_response){
