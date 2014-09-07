@@ -44,7 +44,7 @@ module Saw
         #display all estimates
         @all_est = Estimate.all()
         @auth_token = session[:'csrf'].to_s #auth token for saving forms
-        erb :estimates
+        erb :estimates_element
     end
 
     delete '/estimate' do

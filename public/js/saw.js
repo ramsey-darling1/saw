@@ -115,6 +115,17 @@ $(document).ready(function(){
                 }
             });
 
-    });    
+    });
+
+    $("#view_estimates").click(function() {
+        $.ajax({
+                url: '/estimates',
+                type: 'GET',
+                data: {},
+                success:function(res){
+                    $("#estimate_list").html(res);
+                }
+            });        
+    });
 
 });
