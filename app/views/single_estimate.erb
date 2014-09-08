@@ -1,20 +1,11 @@
-
-    
 <section id="single_estimate_wrap">
-<div class="row">
-    <div class="col-sm-6 col-lg-3">Title</div>
-    <div class="col-sm-6 col-lg-3">High End</div>
-    <div class="col-sm-6 col-lg-3">Low End</div>
-    <div class="col-sm-6 col-lg-3">Date Saved</div>
-    <div class="col-sm-6 col-lg-3">Delete Record</div>
-    <div class="col-sm-6 col-lg-3">View Components</div>
-</div>
-<div class="row <%= est['_id'] %>">
-    <div class="col-sm-6 col-lg-3"><%= est['title'] %></div>
-    <div class="col-sm-6 col-lg-3"><%= est['high_end'] %></div>
-    <div class="col-sm-6 col-lg-3"><%= est['low_end'] %></div>
-    <div class="col-sm-6 col-lg-3"><%= DateTime.strptime(est['date_saved'],'%s').strftime("%d/%m/%y") %></div>
-    <div class="col-sm-6 col-lg-3"><button class="delete btn btn-danger" id="<%= est['_id'] %>">delete</button></div>
-    <div class="col-sm-6 col-lg-3"><button class="view-components btn btn-success" id="view_<%= est['_id'] %>">view components</button></div>
-</div>
+<h2><%= @single_estimate[0].title %></h2>
+<p>High End: <%= @single_estimate[0].high_end %> | Low End: <%= @single_estimate[0].low_end %></p>
+<ul class="list-group">    
+<% @single_estimate[0].components.each do |comp| %>
+    <li class="list-group-item">
+        <%= comp %>
+    </li>
+<% end %>
+</ul>
 </section>
