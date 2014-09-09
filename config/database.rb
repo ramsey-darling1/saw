@@ -13,6 +13,8 @@ end
 Mongoid::Config.sessions =
   if ENV['MONGO_URI']
     {default: {uri: ENV['MONGO_URI'] }}
+  elsif ENV['MONGOHQ_URL']
+    {default: {uri: ENV['MONGOHQ_URL'] }}
   else
     {default: {hosts: ["#{host}:#{port}"], database: database_name}}
   end
