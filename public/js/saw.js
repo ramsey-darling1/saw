@@ -40,10 +40,20 @@ $(document).ready(function(){
 
          drop: function(event, ui){
                 
-                var comp_high = Number($(".high").val());
+                var comp_high = Number($("div.ui-draggable-dragging .high").val());
                 
-                var comp_low = Number($(".low").val());
+                var comp_low = Number($("div.ui-draggable-dragging .low").val());
                 
+                var component = $("div.ui-draggable-dragging p.component-title").html();
+
+                $(components).each(function(index,value){
+                    
+                    if (value == component) {
+                        components.splice(index,1);
+                    }
+
+                });
+
                 high -= comp_high;
 
                 low -= comp_low;
@@ -78,7 +88,7 @@ $(document).ready(function(){
         var fin_low = $("#low_est").val();
 
         var authenticity_token = $("#authenticity_token").val();
-        
+
         if(title === '' || fin_high === '' || fin_low === ''){
             $("#save_response").html('<div class="alert alert-warning">Please make sure all required information is complete before saving</div>');
         }else{
