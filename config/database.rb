@@ -4,12 +4,9 @@ host = 'localhost'
 port = 27017
 
 database_name = case Padrino.env
-  #when :development then 'saw_development'
-  #when :production  then 'saw_production'
-  #when :test        then 'saw_test'
-  when :development then 'saw'
-  when :production  then 'saw'
-  when :test        then 'saw'
+  when :development then 'saw_development'
+  when :production  then 'saw_production'
+  when :test        then 'saw_test'
 end
 
 # Use MONGO_URI if it's set as an environmental variable.
