@@ -116,7 +116,7 @@ header {
 #save_response {
   z-index: 210; }
 
-#overlay {
+#overlay, #overlay_key {
   position: fixed;
   z-index: 200;
   width: 100%;
@@ -125,15 +125,17 @@ header {
   color: #F5F7FA;
   top: 0;
   left: 0; }
-  #overlay #inner_overlay {
+  #overlay #inner_overlay, #overlay #inner_overlay_key, #overlay_key #inner_overlay, #overlay_key #inner_overlay_key {
     margin: 20rem auto;
     max-width: 900px;
     padding: 2rem;
     background: #656D78;
     border-radius: 0.5rem;
     opacity: 1; }
-    #overlay #inner_overlay input {
+    #overlay #inner_overlay input, #overlay #inner_overlay_key input, #overlay_key #inner_overlay input, #overlay_key #inner_overlay_key input {
       margin-bottom: 1rem; }
+  #overlay #inner_overlay_key li, #overlay_key #inner_overlay_key li {
+    color: #656D78; }
 
 .admin h1, .admin h2, .admin h3 {
   font-weight: normal;

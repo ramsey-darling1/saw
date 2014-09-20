@@ -78,6 +78,16 @@ $(document).ready(function(){
         $("#overlay").addClass("disappear");
     });
 
+    $("#show_key").click(function(){
+
+        $("#overlay_key").removeClass("disappear");    
+
+    });
+
+    $("#hide_key").click(function(){
+        $("#overlay_key").addClass("disappear");
+    });
+
     $("#save").click(function(){
         //save the project
 

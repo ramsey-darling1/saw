@@ -12,6 +12,20 @@
 </head>
 <body>
     <header>
+        <div id="eyebrow">
+            <div class="row">
+                <div class="col-md-12">                    
+                    <ul class="nav navbar-nav right">
+                        <li>
+                            <a href="#" id="show_key">View Key</a>
+                        </li>
+                        <li>
+                            <a href="/admin">Admin Area</a>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
         <h1>saw chart</h1>
         <div id="totals">
         totals: low: <span id="low">0</span> | high: <span id="high">0</span>
@@ -386,6 +400,41 @@
                 <input type="hidden" id="components" name="components">
                 <input type="hidden" id="authenticity_token" name="authenticity_token" value="<%= @auth_token %>" />
             </form>
+        </div>
+    </div>
+    <div id="overlay_key" class="disappear">
+        <div id="inner_overlay_key">        
+            <h2>Key</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <img src="imgs/gear.png" /> = Small Issue
+                </li>
+                <li class="list-group-item">
+                    <img src="imgs/gear.png" /><img src="imgs/gear.png" /> = Med Issue
+                </li>
+                <li class="list-group-item">
+                    <img src="imgs/gear.png" /><img src="imgs/gear.png" /><img src="imgs/gear.png" /> = Large Issue
+                </li>
+                <li class="list-group-item">
+                    <img src="imgs/repeat.png" /> = Can be repeated, may need repeated
+                </li>
+                <li class="list-group-item">
+                    <img src="imgs/person.png" /> = Can be completed by client
+                </li>
+                <li class="list-group-item required">
+                    Dark Blue = Required Issue
+                </li>
+                <li class="list-group-item needed">
+                    Light Blue = Recommended Issue
+                </li>
+                <li class="list-group-item desired">
+                    Dark Yellow = Important Issue
+                </li>
+                <li class="list-group-item good">
+                    Light Yellow = Optional Issue
+                </li>
+            </ul>
+            <button class="btn btn-success" id="hide_key">Hide Key</button>
         </div>
     </div>
 </body>

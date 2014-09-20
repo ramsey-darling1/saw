@@ -151,7 +151,7 @@ header {
     z-index: 210;
 }
 
-#overlay {
+#overlay, #overlay_key {
     position: fixed;
     z-index: 200;
     width: 100%;
@@ -161,7 +161,7 @@ header {
     top: 0;
     left: 0;
 
-    #inner_overlay {
+    #inner_overlay, #inner_overlay_key {
         margin: 20rem auto;
         max-width: 900px;
         padding: 2rem;
@@ -172,6 +172,10 @@ header {
         input {
             margin-bottom: 1rem;
         }
+    }
+
+    #inner_overlay_key li {
+        color: $dark-gray;
     }
 }
 
